@@ -20,14 +20,14 @@
                     </div>
                     <div class="bg-white">
                         <div class="border-bottom d-flex justify-content-between p-3" v-for="(todo, i) in todoList" :key="i">
-                            <div>{{todo.WID}}</div>
+                            <div>{{todo.name}}</div>
                         </div>
                     </div>
                 </div>
                 <div class="col-4">
                     <form @submit.prevent="onSubmitTodo" class="text-center mt-3">
                         <div class="d-flex ">
-                            <input class="w-100" type="text" name="WID" placeholder="Inserisci Task" v-model="todo.WID">
+                            <input class="w-100" type="text" name="name" placeholder="Inserisci Task" v-model="todo.name">
                             <button class="btn btn-primary ms-3">Inserisci</button>
                         </div>
                     </form>

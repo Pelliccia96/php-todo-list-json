@@ -1,23 +1,23 @@
 [
     {
-        "WID": "HTML"
+        "name": "HTML"
     },
     {
-        "WID": "CSS"
+        "name": "CSS"
     },
     {
-        "WID": "JavaScript"
+        "name": "JavaScript"
     },
     {
-        "WID": "Vue"
+        "name": "Vue"
     },
     {
-        "WID": "PHP"
+        "name": "PHP"
     },
     {
-        "WID": "MySQL"
+        "name": "MySQL"
     },
     {
-        "WID": "Lavarel"
+        "name": "Lavarel"
     }
 ]

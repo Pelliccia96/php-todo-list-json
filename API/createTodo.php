@@ -3,7 +3,7 @@
 $todo = file_get_contents("../todo.json");
 $todo = json_decode($todo, true);
 $newTodo = [
-    "WID" => $_POST["WID"],
+    "name" => $_POST["name"],
 ];
 $todo[] = $newTodo;
 $todoJson = json_encode($todo, JSON_PRETTY_PRINT);

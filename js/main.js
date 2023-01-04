@@ -15,12 +15,22 @@ const app = createApp({
                 .then((resp) => {
                     this.fetchTodo();
                     console.log(resp);
+                })
+                .catch(error => {
+                    console.log(error);
                 });
         },
         fetchTodo() {
             axios.get("API/todo.php").then((resp) => {
                 this.todoList = resp.data;
                 console.log(resp.data);
+            });
+        },
+        deleteTodo(todoId) {
+            axios.post("API/deleteTodo.php", {todoId}, {
+                headers: { "Content-Type": "multipart/form-data" },
+            }).then((resp) => {
+                this.fetchTodo();
             });
         },
     },

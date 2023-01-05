@@ -33,5 +33,12 @@ const app = createApp({
                 this.fetchTodo();
             });
         },
+        editTodo(todoId) {
+            axios.post("api/editTodo.php", {todoId}, {
+                headers: { "Content-Type": "multipart/form-data" },
+            }).then((resp) => {
+                this.fetchTodo();
+            });
+        },
     },
 }).mount("#app");

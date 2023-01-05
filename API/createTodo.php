@@ -10,6 +10,7 @@ $todo = json_decode($todo, true);
 $newTodo = [
     "name" => $_POST["name"],
     "id" => uniqid(),
+    "status" => false,
 ];
 $todo[] = $newTodo;
 $todoJson = json_encode($todo, JSON_PRETTY_PRINT);

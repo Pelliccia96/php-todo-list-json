@@ -20,8 +20,10 @@
                     </div>
                     <div class="bg-white">
                         <div class="border-bottom d-flex justify-content-between p-3" v-for="(todo, i) in todoList" :key="i">
-                            <div>{{todo.name}}</div>
+                            <div v-if="todo.status===true" class="text-decoration-line-through">{{todo.name}}</div>
+                            <div v-else>{{todo.name}}</div>
                             <div>
+                                <button class="btn btn-info me-2" @click="editTodo(todo.id)" :class="{divSelected: todo.status}">V</button>
                                 <button class="btn btn-danger" @click="deleteTodo(todo.id)">X</button>
                             </div>
                         </div>

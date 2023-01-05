@@ -41,4 +41,7 @@ const app = createApp({
             });
         },
     },
+    mounted() {
+        this.fetchTodo();
+    },
 }).mount("#app");
